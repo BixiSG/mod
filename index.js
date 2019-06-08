@@ -30,7 +30,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on('ready', () => {
   setInterval(async ()=>{
       
-      let textList = ['How to Manage','lurking','Learning','Protecting 7 servers','discord.gg/mNNsfsg','Reporting UIDs','Scanning Servers...','keeping 8000 users safe','reaching 1.6 mil users','updating database...','scanning database...']
+      let textList = ['watching','scanning messages...','AI learning','updating database...','scanning database...','watching','watching','watching','watching','watching']
       var text = textList[Math.floor(Math.random() * textList.length)];
       bot.user.setActivity(text , { type: 'WATCHING' })
   },60000) // milliseconds
@@ -133,7 +133,7 @@ bot.on('guildMemberRemove', member => {
       .setThumbnail(memberavatar)
       .addField('Name:', `${member}`)
       .addField('Has Left the Server', ';(')
-      .addField('Bye Bye :(', 'We will all miss you!')
+      .addField('Bye Bye :(', 'Bye!')
       .addField('The server now has', `${member.guild.memberCount}` + " members")
       .setFooter(`**${member.guild.name}`)
       .setTimestamp()
