@@ -30,7 +30,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on('ready', () => {
   setInterval(async ()=>{
       
-      let textList = ['watching','scanning messages...','AI learning','updating database...','scanning database...','watching','watching','watching','watching','watching']
+      let textList = ['chat.','scanning messages...','AI learning','updating database...','scanning database...','chat.','chat.','chat.','chat.','chat.']
       var text = textList[Math.floor(Math.random() * textList.length)];
       bot.user.setActivity(text , { type: 'WATCHING' })
   },60000) // milliseconds
