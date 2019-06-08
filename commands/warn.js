@@ -6,10 +6,10 @@ let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
 module.exports.run = async (bot, message, args) => {
 
   //!warn @daeshan <reason>
-  if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("No can do pal!");
+  if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("User has been warned.");
   let wUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0])
-  if(!wUser) return message.reply("Couldn't find them yo");
-  if(wUser.hasPermission("MANAGE_MESSAGES")) return message.reply("They waaaay too kewl");
+  if(!wUser) return message.reply("No user found.");
+  if(wUser.hasPermission("MANAGE_MESSAGES")) return message.reply("You are not allowed to do this. `Error: selfwarn`");
   let reason = args.join(" ").slice(22);
 
   if(!warns[wUser.id]) warns[wUser.id] = {
@@ -38,7 +38,7 @@ module.exports.run = async (bot, message, args) => {
 
   if(warns[wUser.id].warns == 2){
     let muterole = message.guild.roles.find(`name`, "muted");
-    if(!muterole) return message.reply("You should create that role dude.");
+    if(!muterole) return message.reply("No `muted` role found.");
 
     let mutetime = "24h";
     await(wUser.addRole(muterole.id));
