@@ -6,17 +6,8 @@ let helpembed = new Discord.RichEmbed()
 .setDescription("**Help Menu**")
 .setColor('RANDOM')
 .addField("Default Prefix:", "`-`")
-.addField("**Help Menu**", "here is a list of commands the bot can do")
-.addField("watcher", "shows watcher social links")
-.addField("about", "displays what this bot can do")
+.addField("**Help Menu**", "here is a list of commands you can use")
 .addField("report", "reports user")
-.addField("8ball", "8ball game")
-.addField("ping", "bot responds ping and how many miliseconds")
-.addField("shorten", "shorten url quickly")
-.addField("cat", "shows random cat pics")
-.addField("doggo", "shows random dog pics")
-.addField("cfccinfo", "CFCC info")
-.addField("omeninfo", "OMEN info");
 
 message.channel.send(helpembed);
 
@@ -46,7 +37,7 @@ try{
   await message.author.send(modembed);
   message.react("✊");
 }catch(e){
-  message.reply("Your DM's are locked... I cannot send you the mod commands..");  
+  message.reply("Error: `DMs are closed`");  
 }
 
 
