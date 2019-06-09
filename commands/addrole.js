@@ -20,10 +20,10 @@ module.exports.run = async (bot, message, args) => {
   await (rMember.addRole(gRole.id));
 
   try {
-    await rMember.send(`Congrats, you have been given the role ${gRole.name}`)
+    await rMember.send(`You have been given the role ${gRole.name}.`)
   } catch (e) {
     console.log(e.stack);
-    message.channel.send(`Congrats to <@${rMember.id}>, they have been given the role ${gRole.name}. We tried to DM them, but their DMs are locked.`)
+    message.channel.send(`User <@${rMember.id}> have been given the ${gRole.name} role.`)
   }
 }
 
