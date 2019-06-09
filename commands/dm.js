@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
    let dMessage = args.join(" ").slice(22);
    if(dMessage.length < 1) return message.reply('You must supply a message!')
 
-     dUser.send(`<@!528992402132959244> **sent you**: ${dMessage} (***___DO NOT REPLY FOR THIS MESSAGE!___***)`)
+     dUser.send(`**Message from user:** <@!528992402132959244> \n **Message:** ${dMessage} \n ||(http://clanwar.cf/announcements/donotreply.png)||`)
 
      message.author.send(`${message.author} **You have sent your message to** ${dUser}.`)
 
