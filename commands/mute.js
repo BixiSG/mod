@@ -4,7 +4,7 @@ exports.run = (client, message, args) => {
   let reason = args.slice(1).join(' ');
   let member = message.mentions.members.first();
   let modlog = message.guild.channels.find('name', 'logs');
-  let muteRole = message.guild.roles.find('name', 'Muted');
+  let muteRole = message.guild.roles.find('name', 'perm-mute');
   if (!modlog) return message.reply('I cannot find a message-log channel').catch(console.error);
   if (!muteRole) return message.reply('I cannot find a mute role').catch(console.error);
   if (reason.length < 1) return message.reply('You must supply a reason for the mute.').catch(console.error);
