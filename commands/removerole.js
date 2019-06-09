@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     return;
   }
   let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
-  if(!rMember) return message.reply("Couldn't find that user, yo.");
+  if(!rMember) return message.reply("Couldn't find that user.");
   let role = args.join(" ").slice(22);
   if(!role) return message.reply("Specify a role!");
   let gRole = message.guild.roles.find(`name`, role);
@@ -19,9 +19,9 @@ module.exports.run = async (bot, message, args) => {
   await(rMember.removeRole(gRole.id));
 
   try{
-    await rMember.send(`RIP, you lost the ${gRole.name} role.`)
+    await rMember.send(`You were removed from ${gRole.name} role.`)
   }catch(e){
-    message.channel.send(`RIP to <@${rMember.id}>, We removed ${gRole.name} from them. We tried to DM them, but their DMs are locked.`)
+    message.channel.send(`User <@${rMember.id}> was removed from ${gRole.name} role.`)
   }
 }
 
