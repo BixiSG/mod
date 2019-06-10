@@ -81,9 +81,10 @@ bot.on('guildMemberAdd', member => {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setThumbnail(memberavatar)
-      .addField(':bust_in_silhouette: | Name : ', `${member}`)
-      .addField(':microphone2: | Welcome!', `Welcome to the server, ${member}`)
-      .addField(':id: | User :', "**[" + `${member.id}` + "]**")
+      .addField(':bust_in_silhouette: Name : ', `${member}`)
+      .addField(':microphone2: Welcome!', `Welcome to the server, ${member}`)
+      .addField(':id: User :', "**[" + `${member.id}` + "]**")
+      .addField(':hash: Your join number: ', `${member.guild.memberCount}`)
       .setFooter(`${member.guild.name}`)
       .setTimestamp()
 
