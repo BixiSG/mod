@@ -3,17 +3,16 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
 let helpembed = new Discord.RichEmbed()
-.setDescription("**Help Menu**")
+.setDescription("**HELP MENU**")
 .setColor('RANDOM')
 .addField("Default Prefix:", "`-`")
-.addField("**Help Menu**", "here is a list of commands you can use")
-.addField("report", "reports user")
+.addField("How to report a user:", "`-report [@user] [reason]`")
 
 message.channel.send(helpembed);
 
 if(message.member.hasPermission("MANAGE_MESSAGES")){
 let modembed = new Discord.RichEmbed()
-.setDescription("**Mod Help Menu**")
+.setDescription("**MOD HELP MENU**")
 .setColor("#8300ff")
 .addField("Default Prefix:", "`-`")
 .addField("**Mod Commands**", "List of Mod Commands and usage")
@@ -29,13 +28,12 @@ let modembed = new Discord.RichEmbed()
 .addField("clear", "like prune/purge only cleaner")
 .addField("prefix", "allows you to change prefix")
 .addField("stats", "displays bot stats")
-.addField("guilds", "displays servers the bot is in")
 .addField("serverinfo", "displays server information")
 .addField("<command> help", "shows usage for command");
 
 try{
   await message.author.send(modembed);
-  message.react("✊");
+  message.react("✔️");
 }catch(e){
   message.reply("Error: `DMs are closed`");  
 }
