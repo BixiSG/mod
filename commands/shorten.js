@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args, tools) => {
   // The command will take one require argument, and one optional (link, title)
  
   // We also want to check if they typed anything at all, if not run this
-  if (!args[0]) return message.channel.send('**Proper Usage: -shorten <URL> [title]**')
+  if (!args[0]) return message.channel.send('**Error:** Use `-shorten <URL> [title]`')
  
   // First, we need to check if they entered an optional title
   if (!args[1]) { // If the second argument in the message is undefined, run this
@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args, tools) => {
       if (res.startsWith('Error:')) return message.channel.send(`**${res}**`); // This will return the full error message
       // Make sure you return, so it doesn't run the rest of the code
      
-    return message.channel.send(`**<${res}>**`); // If no errors encountered, it will return the link.
+    return message.channel.send(`**Your link:** <${res}>`); // If no errors encountered, it will return the link.
      
      
     }); // We also can use <> to make sure it doesn't show an embed, now let's test it!
