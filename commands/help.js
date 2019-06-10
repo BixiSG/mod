@@ -15,7 +15,6 @@ let modembed = new Discord.RichEmbed()
 .setDescription("**MOD HELP MENU**")
 .setColor("#8300ff")
 .addField("Default Prefix:", "`-`")
-.addField("-", "")
 .addField("**Mod Commands**", "List of Mod Commands and usage")
 .addField("addrole", "adds role to user")
 .addField("removerole", "removes role from user")
@@ -34,7 +33,7 @@ let modembed = new Discord.RichEmbed()
 
 try{
   await message.author.send(modembed);
-  message.react("✔️");
+  message.react("✅");
 }catch(e){
   message.reply("Error: `DMs are closed`");  
 }
