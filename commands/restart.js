@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
-    if(!message.author.id === "392082408050130945") return message.channel.send(":x: Only usable by Announcer Developers.");
-    message.channel.send(':wave: Restarting. Bye will be right back!').then(() => {
+    if(!message.author.id === "169131719042007041") return message.channel.send(":x: Only usable by Developer.");
+    message.channel.send(':wave: Restarting.').then(() => {
     process.exit(134);
    });
 };
