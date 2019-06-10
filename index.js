@@ -30,7 +30,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on('ready', () => {
   setInterval(async ()=>{
       
-      let textList = ['chat.','scanning messages...','AI learning','updating database...','scanning database...','chat.','chat.','chat.','chat.','chat.']
+      let textList = ['chat.','scanning messages...','AI learning','updating database...','scanning database...','chat.','chat.','chat.','chat.','chat.','Bixi is hot :3']
       var text = textList[Math.floor(Math.random() * textList.length)];
       bot.user.setActivity(text , { type: 'WATCHING' })
   },60000) // milliseconds
@@ -81,13 +81,10 @@ bot.on('guildMemberAdd', member => {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setThumbnail(memberavatar)
-      .addField(':bust_in_silhouette: | name : ', `${member}`)
+      .addField(':bust_in_silhouette: | Name : ', `${member}`)
       .addField(':microphone2: | Welcome!', `Welcome to the server, ${member}`)
       .addField(':id: | User :', "**[" + `${member.id}` + "]**")
-      .addField(':family_mwgb: | Your are the newest member', `${member.guild.memberCount}`)
-      .addField("Name", `<@` + `${member.id}` + `>`, true)
-      .addField('Server', `${member.guild.name}`, true )
-      .setFooter(`**${member.guild.name}**`)
+      .setFooter(`${member.guild.name}`)
       .setTimestamp()
 
       channel.sendEmbed(embed);
