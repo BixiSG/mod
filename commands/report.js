@@ -19,8 +19,8 @@ module.exports.run = async (bot, message, args) => {
     let reportEmbed = new Discord.RichEmbed()
     .setDescription("NEW REPORT!")
     .setColor(red)
-    .addField("Reported User", `${rUser} (ID: ${rUser.id})`)
-    .addField("Reported By", `${message.author} (ID: ${message.author.id})`)
+    .addField("Reported User", `${rUser} ||(ID: ${rUser.id})||`)
+    .addField("Reported By", `${message.author} ||(ID: ${message.author.id})||`)
     .addField("Channel", message.channel)
     .addField("Time", message.createdAt)
     .addField("Reason", rreason);
