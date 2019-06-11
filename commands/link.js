@@ -8,7 +8,7 @@ exports.run = (client, message, args) => {
       name: client.user.username,
       icon_url: client.user.avatarURL
     },
-    title: "CLANWAR Bot Links:",
+    title: "CLANWAR BOT INVITE LINK",
     url: "https://discordapp.com/api/oauth2/authorize?client_id=582177610000367626&permissions=8&scope=bot",
     description: "Invite link for bot.",
     fields: [      
