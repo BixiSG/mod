@@ -7,7 +7,7 @@ exports.run = async (client, message, url, args, tools) => {
     const embed = new Discord.RichEmbed()
     .setColor(0x954D23)
     .setTitle("NSFW:")
-    .setImage(body.url)
+    .setImage(body.message)
     message.channel.send({embed})
     
 
