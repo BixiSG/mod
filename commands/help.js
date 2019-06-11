@@ -16,6 +16,7 @@ let modembed = new Discord.RichEmbed()
 .setColor("#8300ff")
 .addField("Default Prefix:", "`-`")
 .addField("**Mod Commands**", "List of Mod Commands and usage")
+.addField("dm", "sends direct message to a specified user")
 .addField("addrole", "adds role to user")
 .addField("removerole", "removes role from user")
 .addField("warn", "warns a user")
@@ -29,6 +30,9 @@ let modembed = new Discord.RichEmbed()
 .addField("prefix", "allows you to change prefix")
 .addField("stats", "displays bot stats")
 .addField("serverinfo", "displays server information")
+.addField("cat", "sends random cat picture/gif")
+.addField("doggo", "sends random dog picture/gif")
+.addField("meme", "sends random meme from Reddit/me_irl")
 .addField("<command> help", "shows usage for command");
 
 try{
