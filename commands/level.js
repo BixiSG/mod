@@ -19,7 +19,6 @@ module.exports.run = async (bot, message, args) => {
   let lvlEmbed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor(purple)
-  .addField(message.author.displayAvatarURL)
   .addField("Level", curlvl, true)
   .addField("XP", curxp, true)
   .setFooter(`${difference} XP till level up`, message.author.displayAvatarURL);
