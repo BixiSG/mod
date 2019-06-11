@@ -19,7 +19,7 @@ exports.run = (client, message, args) => {
       
       {
         name: "Discord",
-        value: "[Dark#3668](https://www.reddit.com/user/TheWatcher247)"
+        value: "[Dark#3668](https://discord.gg/quHVxA8)"
       },
        
       {
