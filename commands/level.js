@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
   .setColor(purple)
   .addField("Level", curlvl, true)
   .addField("XP", curxp, true)
-  .addField("test", {file: "https://miro.medium.com/fit/c/240/240/1*h4a_3xofxmQ4v3M1ErzHwg.png"})
+  .addField("test", file: "https://miro.medium.com/fit/c/240/240/1*h4a_3xofxmQ4v3M1ErzHwg.png"})
   .setFooter(`${difference} XP till level up`, message.author.displayAvatarURL);
 
   message.channel.send(lvlEmbed).then(msg => {msg.delete(5000)});
