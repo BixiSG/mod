@@ -7,6 +7,7 @@ bot.commands = new Discord.Collection();
 let purple = botconfig.purple;
 let cooldown = new Set();
 let cdseconds = 5;
+let prefix = prefixes[message.guild.id].prefixes;
 
 fs.readdir("./commands/", (err, files) => {
 
@@ -139,6 +140,16 @@ bot.on('guildMemberRemove', member => {
       
 });
 
+
+
+
+// leave member DM message module
+bot.on('guildMemberRemove', member => {
+  console.log(`${member}` + "has left " + `${member.guild.name}` + " Sending leave message now")
+  console.log("Leave Message Sent")
+});
+
+
  let prefix = prefixes[message.guild.id].prefixes;
   if(!message.content.startsWith(prefix)) return;
   if(cooldown.has(message.author.id)){
@@ -160,20 +171,7 @@ bot.on('guildMemberRemove', member => {
   setTimeout(() => {
     cooldown.delete(message.author.id)
   }, cdseconds * 1000)
-
-
-// leave member DM message module
-bot.on('guildMemberRemove', member => {
-  console.log(`${member}` + "has left " + `${member.guild.name}` + " Sending leave message now")
-  console.log("Leave Message Sent")
-});
-
-
-
-
-
-
-  
+ 
 
 bot.on("message", async message => {
 // bot dm module
