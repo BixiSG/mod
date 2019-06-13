@@ -167,17 +167,6 @@ bot.on("message", async message => {
     };
   }
 
-// xp system rip
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
-
-  let commandfile = bot.commands.get(cmd.slice(prefix.length));
-  if(commandfile) commandfile.run(bot,message,args);
-
-  setTimeout(() => {
-    cooldown.delete(message.author.id)
-  }, cdseconds * 1000)
 
   //channel create / delete channel module
   bot.on('channelCreate', async channel => {
