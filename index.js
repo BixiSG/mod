@@ -219,7 +219,7 @@ bot.on("message", async message => {
     console.log(`${channel.name} has been created.`);
   
   if (channel.type != 'text') return;
-    let sChannel = channel.guild.channels.find('name', 'logs');
+    let sChannel = channel.guild.channels.find('name', 'NOTWORKING');
     sChannel.send(`The channel ${channel} has been created`);
   
   });
@@ -229,7 +229,7 @@ bot.on("message", async message => {
     console.log(`${channel.name} has been deleted.`);
   
   if (channel.type != 'text') return;
-    let sChannel = channel.guild.channels.find('name', 'logs');
+    let sChannel = channel.guild.channels.find('name', 'NOTWORKING');
     sChannel.send(`The channel ${channel} has been deleted`);
   
   });
