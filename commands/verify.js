@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
     message.delete();
-    let role = message.guild.roles.find(role => role.name === 'Unverified');
+    let role = message.guild.roles.find(role => role.name === '✔');
     if (message.channel.name !== 'verification') return message.reply('You must go to the channel #verification');
     message.member.addRole(role);
     if (message.member.roles.has(role.id)) {
@@ -22,5 +22,5 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
     name: 'verify',
-    description: 'you must have the Verified role'
+    description: 'you must have the ✔ role'
 }
