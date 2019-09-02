@@ -4,8 +4,7 @@ const client = new Discord.Client();
 const defaults = {
 	timeout: 30,
 	color: 2555834,
-	triggers: {newPoll: '!newpoll', vote: '!vote', results: '!results'},
-	appName: 'Votemaster'
+	triggers: {newPoll: '-newpoll', vote: '-vote', results: '-results'},
 };
 var pollIndex = 0, polls = new Map();
 
