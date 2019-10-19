@@ -12,6 +12,7 @@ module.exports.run = async (bot, message, args) => {
 .addField("/acalerts", "anti cheat alerts configuration")
 .addField("/report list", "all reported players")
 .addField("/report check", "check player reports")
+.addField("/ipreport", "check banned alts")
 .addField("/dupeip", "alt accounts checker")
 .addField("/history", "punishment history")
 .addField("/find", "what server a player is on")
