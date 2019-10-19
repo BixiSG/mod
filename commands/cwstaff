@@ -6,14 +6,14 @@ module.exports.run = async (bot, message, args) => {
         .setDescription("**Staff Commands**")
         .setColor("#15f153")
         .setThumbnail(bicon)
-        .addField("/p", "punishment command")
-        .addField("/p reasons", "list of the punishments")
-        .addField("/logs", "cheat logs list")
-        .addField("/dupeip", "alt accounts checker")
-        .addField("/v", "vanish")
-        .addField("/tele", "teleporting")
-        .addField("/find", "what server player is on")
-        .addField("/mask", "masking");
+        .addField("p", "punishment command")
+        .addField("p reasons", "list of the punishments")
+        .addField("logs", "cheat logs list")
+        .addField("dupeip", "alt accounts checker")
+        .addField("v", "vanish")
+        .addField("tele", "teleporting")
+        .addField("find", "what server player is on")
+        .addField("mask", "masking");
 
         return message.channel.send(botembed);
 }
