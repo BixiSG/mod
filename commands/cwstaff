@@ -3,14 +3,14 @@ const Discord = require('discord.js');
 module.exports.run = async (bot, message, args) => {
         let bicon = bot.user.displayAvatarURL;
         let botembed = new Discord.RichEmbed()
-        .setDescription("CLANWAR Staff Commands:")
+        .setDescription("__**CLANWAR Staff Commands:**__")
         .setColor("#15f153")
         .setThumbnail(bicon)
         .addField("p", "punishment command")
 	.addField("logs", "list of the cheat logs")
 	.addField("report", "report and see reports")
         .addField("dupeip", "alt accounts checker")
-        .addField("history", "punishment history");
+        .addField("history", "punishment history")
         .addField("find", "what server a player is on")
         .addField("v", "vanish")
         .addField("tele", "teleportation")
