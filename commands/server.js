@@ -8,7 +8,7 @@ module.exports.run = async (bot,message,args) => {
   let embed = new Discord.RichEmbed()
   .setColor("#7289DA")
   .setTitle("Server Online:")
-  .addField(body.players.online);
+  .addField(players.online);
 
   message.channel.send(embed);
 
