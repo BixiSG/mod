@@ -6,7 +6,7 @@ module.exports.run = async (bot,message,args) => {
   let{body} = await superagent
   .get(`https://api.mcsrvstat.us/2/clanwar.cf`);
 
-  let catembed = new Discord.RichEmbed()
+  let embed = new Discord.RichEmbed()
   .setColor("#7289DA")
   .setTitle("Server Online:")
   .addField(body.online);
