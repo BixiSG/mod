@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
         .setDescription("__**CLANWAR Staff Commands:**__")
         .setColor("#15f153")
         .setThumbnail(bicon)
-.addField(">/p", "punishment command")
+.addField("/p", "punishment command")
 .addField("/p reasons", "punishment reasons")
 .addField("/logs", "list of the cheat logs")
 .addField("/acalerts", "anti cheat alerts configuration")
