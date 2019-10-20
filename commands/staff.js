@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
 .addField("/tele", "teleportation")
 .addField("/mask", "rank masking")
 .addField("/sc", "staff chat toggling")
-.addField("/staffalerts", "staff join alert")
+.addField("/staffalerts", "toggle all staff related messages (anticheat alerts, staff chat, etc.)")
 .addField("/staffonline", "online staff members")
 .addField("/silentjoin", "toggle joining message");
         return message.channel.send(botembed);
