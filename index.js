@@ -81,7 +81,7 @@ bot.on('guildMemberAdd', member => {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setThumbnail(memberavatar)
-      .addField(':cw_server_logo: Welcome!', `Welcome to the server, ${member}`)
+      .addField(':wave: Welcome!', `Welcome to the server, ${member}`)
       .addField(':id: User :', "**[" + `${member.id}` + "]**")
       .addField(':hash: Your join number: ', `${member.guild.memberCount}`)
       .setFooter(`${member.guild.name}`)
