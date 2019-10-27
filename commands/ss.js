@@ -8,7 +8,7 @@ exports.run = async (client, message, args, tools) => {
     .setColor(0x0000)
     .setTitle("Minecraft Server Stats")
     .addField("Online players:", players.now)
-    message.channel.send({embed})
+    message.channel.send(embed)
     
 
 }
