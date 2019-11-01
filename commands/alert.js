@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
       if(!message.member.hasPermission("BAN_MEMBERS")) return;
       const sayMessage = args.join(" ");
       message.delete().catch();
-      message.channel.send(`@everyone\n ${sayMessage}`);
+      message.channel.send(`[:bell: @everyone]\n${sayMessage}`);
 
 }
 
