@@ -4,19 +4,19 @@ module.exports.run =async (bot, message, args) => {
     let inline = true
     let resence = true
     const status = {
-        online: "Online",
-        idle: "Idle",
-        dnd: "Do Not Disturb",
-        offline: "Offline/Invisible"
+        online: ":green_heart: Online",
+        idle: ":yellow_heart: Idle",
+        dnd: ":no_entry: Do Not Disturb",
+        offline: ":grey_question: Offline/Invisible"
       }
         
 const member = message.mentions.members.first() || message.guild.members.get(args[0]) || message.member;
 let target = message.mentions.users.first() || message.author
 
 if (member.user.bot === true) {
-    bot = "Yes";
+    bot = ":robot: Yes";
   } else {
-    bot = "No";
+    bot = ":x::robot: No";
   }
 
             let embed = new Discord.RichEmbed()
@@ -30,8 +30,7 @@ if (member.user.bot === true) {
                 .addField("Playing", `${member.user.presence.game ? `🎮 ${member.user.presence.game.name}` : "Not playing"}`,inline, true)
                 .addField("Roles", `${member.roles.filter(r => r.id !== message.guild.id).map(roles => `\`${roles.name}\``).join(" **|** ") || "No Roles"}`, true)
                 .addField("Joined Discord At", member.user.createdAt)
-                .setFooter(`Information about ${member.user.username}`)
-                .setTimestamp()
+                .setFooter('Information about ${member.user.username}', 'https://cdn3.iconfinder.com/data/icons/gradient-circle/36/5029-512.png')
     
             message.channel.send(embed);
 
