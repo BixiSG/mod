@@ -6,13 +6,14 @@ exports.run = (client, message, args) => {
      if (message.member.hasPermission("KICK_MEMBERS")) {
        const embed = new Discord.RichEmbed()
        .setColor(#800080)
-       .setTitle("Poll:")
+       .setTitle(" Poll: ")
        .setDescription(`**${sayMessage}**`)
         message.channel.send(embed).then(m => {
             m.react('✅');
             m.react('❌');
-            message.delete();
+            
            })
+          message.delete(); 
       }
 }
   
