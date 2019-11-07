@@ -5,11 +5,11 @@ exports.run = (client, message, args) => {
      if (sayMessage.length < 1) return message.channel.send(":x: Usage: `-poll text`")
      if (message.member.hasPermission("KICK_MEMBERS")) {
        const embed = new Discord.RichEmbed()
-       .setColor(800080)
+       .setColor(9400D3)
        .setTitle(`**${sayMessage}**`)
         message.channel.send(embed).then(m => {
-            m.react('✅');
             m.react('❌');
+            m.react('✅');
            })
       }
 }
