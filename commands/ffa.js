@@ -9,6 +9,7 @@ module.exports.run = async (bot,message,args) => {
   let embed = new Discord.RichEmbed()
   .setColor("#6a0dad")
   .setTitle("FFA Server Information:")
+  .setThumbnail('https://i.ibb.co/M9KTXGM/FFA.png')
   .addField("Online Status:", `**${body.online}**`)
   .addField("Players Online:", `**${body.players.now}**/${body.players.max}`)
   .addField("Core Version:", `${body.server.name}`)
