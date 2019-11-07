@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const bot = new Discord.Client();
 exports.run = (client, message, args) => {
       if (!message.guild.member(client.user).hasPermission('ADD_REACTIONS')) return message.reply(':x: Missing ADD_REACTIONS perms')
       const sayMessage = args.join(" ");
