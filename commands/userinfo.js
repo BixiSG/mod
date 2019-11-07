@@ -30,8 +30,7 @@ if (member.user.bot === true) {
                 .addField("Playing", `${member.user.presence.game ? `🎮 ${member.user.presence.game.name}` : "Not playing"}`,inline, true)
                 .addField("Roles", `${member.roles.filter(r => r.id !== message.guild.id).map(roles => `\`${roles.name}\``).join(" **|** ") || "No Roles"}`, true)
                 .addField("Joined Discord At", member.user.createdAt)
-                .addField("Server Join Number", member.guild.memberCount)
-                .setFooter('Information about ${member.user.username}', 'https://cdn3.iconfinder.com/data/icons/gradient-circle/36/5029-512.png')
+                .setFooter(`Information about ${member.user.username}`, 'https://cdn3.iconfinder.com/data/icons/gradient-circle/36/5029-512.png')
     
             message.channel.send(embed);
 
