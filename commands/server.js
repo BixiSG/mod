@@ -8,8 +8,8 @@ module.exports.run = async (bot,message,args) => {
 
   let embed = new Discord.RichEmbed()
   .setColor("#6a0dad")
-  .setTitle("Server Information:", 'https://i.imgur.com/tqjdqSV.png')
-  .addField("Players Online:", `${body.players.now}/${body.players.max}`)
+  .setTitle("Server Information:", 'https://i.ibb.co/RP8JT1h/cw-server-logo.png')
+  .addField("Players Online:", `**${body.players.now}**/${body.players.max}`)
   .addField("Core Version:", `${body.server.name}`)
 
   message.channel.send(embed);
