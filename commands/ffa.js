@@ -14,7 +14,20 @@ module.exports.run = async (bot,message,args) => {
   .addField("Core Version:", `${body.server.name}`)
   .setFooter(`clanwar.cf`, 'https://i.ibb.co/RP8JT1h/cw-server-logo.png')
   message.channel.send(embed);
-
+  
+  setTimeout(function(){
+   let{body} = await superagent
+  .get(`https://mcapi.us/server/status?ip=clanwar.cf`);
+    
+  let embed = new Discord.RichEmbed()
+  .setColor("#6a0dad")
+  .setTitle("Server Information:")
+  .addField("Online Status:", `**${body.online}**`)
+  .addField("Players Online:", `**${body.players.now}**/${body.players.max}`)
+  .addField("Core Version:", `${body.server.name}`)
+  .setFooter(`clanwar.cf`, 'https://i.ibb.co/RP8JT1h/cw-server-logo.png')
+  message.channel.send(embed)
+  }, 500);})
 }
         
   module.exports.help = {
