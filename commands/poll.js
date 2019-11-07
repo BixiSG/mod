@@ -13,7 +13,7 @@ exports.run = (client, message, args) => {
             m.react('❌');
             
            })
-          message.delete(); 
+ 
       }
 }
   
