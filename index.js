@@ -85,7 +85,6 @@ bot.on('guildMemberAdd', member => {
       .addField(':id: User :', "[" + `${member.id}` + "]")
       .addField(':hash: Your join number: ', `${member.guild.memberCount}`)
       .setFooter('Account created: member.user.createdAt', 'https://cdn3.iconfinder.com/data/icons/gradient-circle/36/5029-512.png')
-      .setTimestamp()
 
       channel.sendEmbed(embed);
 });
