@@ -8,10 +8,10 @@ module.exports.run = async (bot,message,args) => {
 
   let embed = new Discord.RichEmbed()
   .setColor("#6a0dad")
-  .setTitle("Server Information:", 'https://i.ibb.co/RP8JT1h/cw-server-logo.png')
+  .setTitle("Server Information:")
   .addField("Players Online:", `**${body.players.now}**/${body.players.max}`)
   .addField("Core Version:", `${body.server.name}`)
-
+  .setFooter(`clanwar.cf`, 'https://i.ibb.co/RP8JT1h/cw-server-logo.png')
   message.channel.send(embed);
 
 }
