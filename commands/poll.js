@@ -7,7 +7,7 @@ exports.run = (client, message, args) => {
      {
        const embed = new Discord.RichEmbed()
        .setColor("#6a0dad")
-       .setTitle(`**${sayMessage}**`)
+       .addField(`**${sayMessage}**`)
         message.channel.send(embed).then(m => {
             m.react('✅');
             setTimeout(function(){m.react('❌')}, 200);})
