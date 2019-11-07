@@ -26,7 +26,8 @@ module.exports.run = async (bot, message, args) => {
         "southafrica": ":flag_za:  South Africa"
     };
     const embed = new Discord.RichEmbed()
-        .setAuthor(message.guild.name, message.guild.iconURL)
+        .setAuthor(message.guild.name)
+        .setColor("#6a0dad")
         .addField("Name", message.guild.name, true)
         .addField("ID", message.guild.id, true)
         .addField("Owner", `${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}`, true)
