@@ -20,7 +20,7 @@ if (member.user.bot === true) {
   }
 
             let embed = new Discord.RichEmbed()
-                //.setAuthor(member.user.username)
+                .setAuthor(member.user.username)
                 .setThumbnail((target.displayAvatarURL))
                 .setColor("#00ff00")
                 .addField("Full Username", `${member.user.tag}`, inline)
