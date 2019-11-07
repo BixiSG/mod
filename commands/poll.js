@@ -11,6 +11,7 @@ exports.run = (client, message, args) => {
             m.react('❌');
             m.react('✅');
            })
+           message.delete();
       }
 }
 
