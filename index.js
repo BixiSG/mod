@@ -48,11 +48,6 @@ bot.on('ready', () => {
 //end of console messages
 
 //------- Timed Loop (FFA) -------//
-module.exports.run = async (bot,message,args) => {
-
-  let{body} = await superagent
-  .get(`https://mcapi.us/server/status?ip=clanwar.cf&port=25567`);
-
   let ffaloop = new Discord.RichEmbed()
   .setColor("#6a0dad")
   .setTitle("FFA Server Information:")
@@ -66,6 +61,9 @@ module.exports.run = async (bot,message,args) => {
 bot.on('message', function(message) {
     if (message.content === "$ffa") { 
         var interval = setInterval (function () {
+          module.exports.run = async (bot,message,args) => {
+          let{body} = await superagent
+          .get(`https://mcapi.us/server/status?ip=clanwar.cf&port=25567`);
             message.channel.send(`${body.players.now}`)
             .catch(console.error);
         }, 1 * 10000); 
