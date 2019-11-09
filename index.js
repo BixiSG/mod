@@ -32,7 +32,7 @@ bot.on('ready', () => {
       
       let textList = ['updating database...','IP: clanwar.cf','IP: mc.clanwar.cf']
       var text = textList[Math.floor(Math.random() * textList.length)];
-      bot.user.setActivity(text , { type: 'WATCHING' })
+      bot.user.setActivity(text , { type: 'STREAMING' })
   },60000) // milliseconds
 });
   
