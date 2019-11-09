@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client();
 const Welcome = require("discord-welcome");
+const superagent = require("superagent");
 bot.commands = new Discord.Collection();
 //let xp = require("./xp.json");
 let purple = botconfig.purple;
@@ -46,11 +47,26 @@ bot.on('ready', () => {
 })  
 //end of console messages
 
-//------- test module -------//
+//------- Timed Loop (FFA) -------//
+module.exports.run = async (bot,message,args) => {
+
+  let{body} = await superagent
+  .get(`https://mcapi.us/server/status?ip=clanwar.cf&port=25567`);
+
+   let ffaloop = new Discord.RichEmbed()
+  .setColor("#6a0dad")
+  .setTitle("FFA Server Information:")
+  .setThumbnail('https://i.ibb.co/M9KTXGM/FFA.png')
+  .addField("Online Status:", `**${body.online}**`)
+  .addField("Players Online:", `**${body.players.now}**/${body.players.max}`)
+  .addField("Core Version:", `${body.server.name}`)
+  .setFooter(`clanwar.cf`, 'https://i.ibb.co/RP8JT1h/cw-server-logo.png')
+   }
+
 bot.on('message', function(message) {
-    if (message.content === "$loop") { 
+    if (message.content === "$$$ffa$$$") { 
         var interval = setInterval (function () {
-            message.channel.send("123")
+            message.channel.send(ffaloop)
             .catch(console.error); 
         }, 1 * 60000); 
     }
