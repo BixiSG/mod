@@ -30,9 +30,9 @@ fs.readdir("./commands/", (err, files) => {
 bot.on('ready', () => {
   setInterval(async ()=>{
       
-      let textList = ['updating database...','IP: clanwar.cf','IP: mc.clanwar.cf']
+      let textList = ['#⚙-support','IP: clanwar.cf','IP: mc.clanwar.cf']
       var text = textList[Math.floor(Math.random() * textList.length)];
-      bot.user.setActivity(text , { type: 'STREAMING' })
+      bot.user.setActivity(text , { type: 'WATCHING' })
   },60000) // milliseconds
 });
   
