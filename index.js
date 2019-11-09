@@ -46,19 +46,6 @@ bot.on('ready', () => {
 })  
 //end of console messages
 
-//------- Timed Loop (FFA) -------//
-const superagent = require("superagent");
-
-bot.on('message', function(message) {
-    if (message.content === "$ffa") { 
-        var interval = setInterval (function () {
-            let{body} = await superagent
-            .get(`https://mcapi.us/server/status?ip=clanwar.cf&port=25567`)
-            message.channel.send(`Status: ${body.players.online}`)
-            .catch(console.error);
-        }, 1 * 10000); 
-    }
-});
 
 //------ start first part of invite module ------------ //
 
