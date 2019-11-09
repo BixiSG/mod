@@ -46,7 +46,15 @@ bot.on('ready', () => {
 })  
 //end of console messages
 
-
+//------- test module -------//
+bot.on('message', function(message) {
+    if (message.content === "$loop") { 
+        var interval = setInterval (function () {
+            message.channel.send("123")
+            .catch(console.error); 
+        }, 1 * 1000); 
+    }
+});
 
 //------ start first part of invite module ------------ //
 
