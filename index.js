@@ -52,7 +52,7 @@ bot.on('message', function(message) {
         var interval = setInterval (function () {
             message.channel.send("123")
             .catch(console.error); 
-        }, 1 * 1000); 
+        }, 1 * 60000); 
     }
 });
 
