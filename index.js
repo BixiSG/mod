@@ -56,7 +56,7 @@ bot.on('ready', () => {
   .addField("Players Online:", `**${body.players.now}**/${body.players.max}`)
   .addField("Core Version:", `${body.server.name}`)
   .setFooter(`clanwar.cf`, 'https://i.ibb.co/RP8JT1h/cw-server-logo.png')
-}
+
 
 bot.on('message', function(message) {
     if (message.content === "$ffa") { 
@@ -64,8 +64,8 @@ bot.on('message', function(message) {
           module.exports.run = async (bot,message,args) => {
           let{body} = await superagent
           .get(`https://mcapi.us/server/status?ip=clanwar.cf&port=25567`);
-            message.channel.send(`${body.players.now}`)
-            .catch(console.error);
+           message.channel.send(`${body.players.now}`)
+            .catch(console.error)
         }, 1 * 10000); 
     }
 });
