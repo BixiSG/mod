@@ -66,7 +66,7 @@ module.exports.run = async (bot,message,args) => {
 bot.on('message', function(message) {
     if (message.content === "$ffa") { 
         var interval = setInterval (function () {
-            message.channel.send(ffaloop)
+            message.channel.send('${body.players.now}')
             .catch(console.error);
         }, 1 * 10000); 
     }
