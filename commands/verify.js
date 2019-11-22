@@ -8,13 +8,13 @@ module.exports.run = async (bot, message, args) => {
     if (message.member.roles.has(role.id)) {
         let verifyEmbed = new Discord.RichEmbed()
             .setAuthor(message.member.displayName, message.author.displayAvatarURL)
-            .setColor('#36393f')
+            .setColor('#eeee00')
             .setDescription('Your account has already been verified!')
         return message.channel.send((verifyEmbed));
     } else {
         let verifyEmbed = new Discord.RichEmbed()
             .setAuthor(message.member.displayName, message.author.displayAvatarURL)
-            .setColor('#36393f')
+            .setColor('#008000')
             .setDescription('Your account has been successfully verified.')
         return message.channel.send((verifyEmbed));
     }
