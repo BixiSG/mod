@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-    message.delete();
+    
     let role = message.guild.roles.find(role => role.name === '✔');
     if (message.channel.name !== 'verification') return message.reply('You must go to the channel #verification');
     message.member.addRole(role);
