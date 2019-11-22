@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const request = require("request").defaults({ encoding: null });
 
 exports.run = async (client, message, args) => { // eslint-disable-line no-unused-vars
+  message.delete();  
   if (args.length > 0) {
     const memeOutput = request(`https://www.minecraftskinstealer.com/achievement/a.php?i=13&h=Achievement+get%21&t=${args.join("+")}`);
     message.channel.send({
