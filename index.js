@@ -70,7 +70,7 @@ bot.on('ready', () => {
 
 
 // Reactions
-client.on('messageReactionAdd', (reaction, user) => {
+bot.on('messageReactionAdd', (reaction, user) => {
   if (message.channel.id === '602240488204140544') {
     if (reaction.emoji.name === "ok_hand") {
       const guildMember = reaction.message.guild.members.get(user.id);
