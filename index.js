@@ -70,15 +70,7 @@ bot.on('ready', () => {
 
 
 // Reactions
-bot.on('messageReactionAdd', (reaction, user) => {
-  if (message.channel.id === '602240488204140544') {
-    if (reaction.emoji.name === "ok_hand") {
-      const guildMember = reaction.message.guild.members.get(user.id);
-      const role = reaction.message.guild.roles.get('611553082207109143');
-      guildMember.addRole(role);
-    }
-  }
-});
+
 
 
 // welcome member message module
