@@ -84,12 +84,12 @@ bot.channels.get(channel_id).fetchMessage(message_id).then(m => {
     console.error(e);
     });
 bot.on("messageReactionAdd", (reaction, user) => {
-    if(reaction.emoji.id == "<:white_check_mark:649250350900969522>" && reaction.message.id === message_id) 
+    if(reaction.emoji.id == "649250350900969522" && reaction.message.id === message_id) 
         {
             guild.fetchMember(user) // fetch the user that reacted
                 .then((member) => 
                 {
-                    let role = (member.guild.roles.find(role => role.name === "Alert"));
+                    let role = (member.guild.roles.find(role => role.name === "Alerts"));
                     member.addRole(role)
                     .then(() => 
                     {
