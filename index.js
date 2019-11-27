@@ -71,7 +71,7 @@ bot.on('ready', () => {
 
 // Reactions
  bot.on('messageReactionAdd', async (reaction, user) => {
-   if(reaction.emoji.name === "✅") return;
+   if(reaction.emoji.name === "white_check_mark") return;
    if(user === bot.user) return;
 
    let role = bot.guild.roles.find("name", "Alerts");
