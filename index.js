@@ -70,7 +70,7 @@ bot.on('ready', () => {
 
 
 // Reactions
-bot.on("messageReactionAdd", (reaction, user) => {
+client.on("messageReactionAdd", (reaction, user) => {
     if(reaction.emoji.id == "649250350900969522") 
         {
             guild.fetchMember(user)
