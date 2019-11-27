@@ -71,7 +71,8 @@ bot.on('ready', () => {
 
 // Reactions
  bot.on('messageReactionAdd', async (reaction, user) => {
-   let role = message.guild.roles.find(role => role.name === 'Alerts');
+    if(reaction.emoji.name === "✅") return;
+    let role = message.guild.roles.find(role => role.name === 'Alerts');
     if (message.channel.name !== 'verification') return message.reply(':x: You must go to the channel #verification');
     message.member.addRole(role);
  });
