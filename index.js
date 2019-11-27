@@ -71,10 +71,12 @@ bot.on('ready', () => {
 
 // Reactions
  bot.on('messageReactionAdd', async (reaction, user) => {
-    if(reaction.emoji.name === "✅") return;
-    let role = message.guild.roles.find(role => role.name === 'Alerts');
-    if (message.channel.name !== 'verification') return message.reply(':x: You must go to the channel #verification');
-    message.member.addRole(role);
+   if(reaction.emoji.name === "✅") return;
+   if(user === bot.user) return;
+
+   let roleA = bot.guild.roles.find("name", "Alert");
+
+   await user.addRole(roleA.id);
  });
 
 // welcome member message module
