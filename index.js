@@ -70,19 +70,7 @@ bot.on('ready', () => {
 
 
 // Reactions
-client.on("messageReactionAdd", (reaction, user) => {
-    if(reaction.emoji.id == "649250350900969522") 
-        {
-            guild.fetchMember(user)
-                .then((member) => 
-                {
-                    let role = (member.guild.roles.find(role => role.name === "Alerts"));
-                    member.addRole(role)
-                    );
-                });
-        }
-}
-  
+
 
 // welcome member message module
 bot.on('guildMemberAdd', member => {
