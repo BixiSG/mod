@@ -70,7 +70,36 @@ bot.on('ready', () => {
 
 
 // Reactions
+let channel_id = "649242708912635914"; 
+let message_id = "649248719991996417";
 
+
+
+bot.on("ready", (reaction, user) => {
+
+bot.channels.get(channel_id).fetchMessage(message_id).then(m => {
+        console.log("Cached reaction message.");
+    }).catch(e => {
+    console.error("Error loading message.");
+    console.error(e);
+    });
+bot.on("messageReactionAdd", (reaction, user) => {
+    if(reaction.emoji.id == "<:white_check_mark:649250350900969522>" && reaction.message.id === message_id) 
+        {
+            guild.fetchMember(user) // fetch the user that reacted
+                .then((member) => 
+                {
+                    let role = (member.guild.roles.find(role => role.name === "Alert"));
+                    member.addRole(role)
+                    .then(() => 
+                    {
+                        console.log(`Added the role to ${member.displayName}`);
+                    }
+                    );
+                });
+        }
+}
+  
 
 // welcome member message module
 bot.on('guildMemberAdd', member => {
