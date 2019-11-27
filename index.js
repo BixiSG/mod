@@ -71,16 +71,10 @@ bot.on('ready', () => {
 
 // Reactions
  bot.on('messageReactionAdd', async (reaction, user) => {
-   if(reaction.emoji.name === "white_check_mark") return;
-   if(user === bot.user) return;
-
-   let role = bot.guild.roles.find("name", "Alerts");
-   // let role1 = bot.guild.roles.find("name", "Role1");
-
-   await user.addRole(role.id);
-  // await user.removeRole(role1.id);
+   let role = message.guild.roles.find(role => role.name === 'Alerts');
+    if (message.channel.name !== 'verification') return message.reply(':x: You must go to the channel #verification');
+    message.member.addRole(role);
  });
-
 
 // welcome member message module
 bot.on('guildMemberAdd', member => {
