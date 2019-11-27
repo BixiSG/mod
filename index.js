@@ -70,7 +70,16 @@ bot.on('ready', () => {
 
 
 // Reactions
+ bot.on('messageReactionAdd', async (reaction, user) => {
+   if(reaction.emoji.name === "✅") return;
+   if(user === bot.user) return;
 
+   let role = bot.guild.roles.find("name", "Alerts");
+   // let role1 = bot.guild.roles.find("name", "Role1");
+
+   await user.addRole(role.id);
+  // await user.removeRole(role1.id);
+ });
 
 
 // welcome member message module
