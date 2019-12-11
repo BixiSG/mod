@@ -8,7 +8,7 @@ exports.run = (client, message, args) => {
        const embed = new Discord.RichEmbed()
        .setColor("#6a0dad")
        .setDescription(`**${sayMessage}**`)
-       .setFooter('Vote buy clicking on one of the emojis.', 'https://cdn3.iconfinder.com/data/icons/gradient-circle/36/5029-512.png')
+       .setFooter('Vote by clicking on one of the emojis.', 'https://cdn3.iconfinder.com/data/icons/gradient-circle/36/5029-512.png')
         message.channel.send(embed).then(m => {
             m.react('✅');
             setTimeout(function(){m.react('❌')}, 200);})
