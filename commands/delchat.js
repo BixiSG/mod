@@ -6,3 +6,4 @@ module.exports.run = async (bot, message, args) => {
       if(!message.member.hasPermission("BAN_MEMBERS")) return;
 
       fetchedChannel.delete();
+ }
