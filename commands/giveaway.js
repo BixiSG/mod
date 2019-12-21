@@ -7,7 +7,7 @@ exports.run = (client, message, args) => {
      {
        const embed = new Discord.RichEmbed()
        .setColor("#6a0dad")
-       .setDescription('**We are hosting a giveaway!**\n**Prize:** ${sayMessage}')
+       .setDescription("**We are hosting a giveaway!**\n**Prize:** ${sayMessage}")
        .setFooter('Click the emoji to participate.', 'https://cdn3.iconfinder.com/data/icons/gradient-circle/36/5029-512.png')
         message.channel.send(embed).then(m => {
             m.react('🎉');
