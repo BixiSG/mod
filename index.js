@@ -136,11 +136,11 @@ bot.on('guildMemberRemove', member => {
       
 });
 
-
+// Auto response tags
 const responseObject = {
-  "1": "1-1",
-  "wat": "Say what?",
-  "lol": "roflmaotntpmp"
+  "ip": "IP: `clanwar.cf` or `mc.clanwar.cf`",
+  "What's the ip": "IP: `clanwar.cf` or `mc.clanwar.cf`",
+  "Whats the ip": "IP: `clanwar.cf` or `mc.clanwar.cf`"
 };
 bot.on("message", (message) => {
   if(responseObject[message.content]) {
