@@ -69,7 +69,11 @@ bot.on('ready', () => {
 //------ end first part of invite module ------------ //
 
 
-// Reactions
+// IP automessage 
+bot.on('message', msg => {
+    if (msg.content === 'ip') {
+        return msg.reply('IP: `clanwar.cf` or `mc.clanwar.cf`');
+    }
 
 
 // welcome member message module
