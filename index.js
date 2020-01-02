@@ -137,6 +137,17 @@ bot.on('guildMemberRemove', member => {
 });
 
 
+const responseObject = {
+  "1": "1-1",
+  "wat": "Say what?",
+  "lol": "roflmaotntpmp"
+};
+client.on("message", (message) => {
+  if(responseObject[message.content]) {
+    message.channel.send(responseObject[message.content]);
+  }
+});
+
 
 
 // leave member DM message module
