@@ -142,7 +142,7 @@ const responseObject = {
   "wat": "Say what?",
   "lol": "roflmaotntpmp"
 };
-client.on("message", (message) => {
+bot.on("message", (message) => {
   if(responseObject[message.content]) {
     message.channel.send(responseObject[message.content]);
   }
