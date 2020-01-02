@@ -140,6 +140,8 @@ bot.on('guildMemberRemove', member => {
 const responseObject = {
   "ip": "IP: `clanwar.cf` or `mc.clanwar.cf`",
   "What's the ip": "IP: `clanwar.cf` or `mc.clanwar.cf`",
+  "what's the ip": "IP: `clanwar.cf` or `mc.clanwar.cf`",
+  "whats the ip": "IP: `clanwar.cf` or `mc.clanwar.cf`",
   "Whats the ip": "IP: `clanwar.cf` or `mc.clanwar.cf`"
 };
 bot.on("message", (message) => {
