@@ -24,7 +24,7 @@ exports.run = (client, message, args) => {
        
       {
         name: "Website",
-        value: "[clanwar.cf](http://clanwar.cf)"
+        value: "[clanwar.cf](http://www.clanwar.cf)"
       },
       
     ],
