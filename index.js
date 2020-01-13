@@ -73,7 +73,7 @@ bot.on('ready', () => {
 
 // welcome member message module
 bot.on('guildMemberAdd', member => {
-  let channel = member.guild.channels.find('name', 'welcome');
+  let channel = member.guild.channels.find('name', 'logs');
   let memberavatar = member.user.avatarURL
       if (!channel) return;
       let embed = new Discord.RichEmbed()
@@ -111,15 +111,15 @@ bot.on('guildMemberAdd', member => {
     // This is just to simplify the message being sent below (inviter doesn't have a tag property)
     const inviter = client.users.get(invite.inviter.id);
     // Get the log channel (change to your liking)
-    const inviteChannel = member.guild.channels.find(channel => channel.name === "invites");
+    const inviteChannel = member.guild.channels.find(channel => channel.name === "logs");
     // A real basic message with the information we need. 
-    inviteChannel.send(`${member.user.tag} joined using invite code ${invite.code} from ${inviter.tag}. Invite was used ${invite.uses} times since its creation.`);
+    inviteChannel.send(`:MCgoldingot: ${member.user.tag} joined using invite code ${invite.code} from ${inviter.tag}. Invite was used ${invite.uses} times since its creation.`);
   });
 });
 
 // leave member message module
 bot.on('guildMemberRemove', member => {
-  let channel = member.guild.channels.find('name', 'leave');
+  let channel = member.guild.channels.find('name', 'logs');
   let memberavatar = member.user.avatarURL
       if (!channel) return;
       let embed = new Discord.RichEmbed()
@@ -127,7 +127,6 @@ bot.on('guildMemberRemove', member => {
       .setThumbnail(memberavatar)
       .addField('Name:', `${member}`)
       .addField('Has left the server', ';(')
-      .addField('Bye-Bye :(', 'Bye!')
       .addField('The server now has', `${member.guild.memberCount}` + " members")
       .setFooter(`**${member.guild.name}`)
       .setTimestamp()
