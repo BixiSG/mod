@@ -23,7 +23,7 @@ if (member.user.bot === true) {
             let embed = new Discord.RichEmbed()
                 .setThumbnail('https://i.ibb.co/GHSQKC4/x-mark-png-6.png')
                 .setColor("#ff0000")
-                .addField("**DENIED**", `${member.user.tag}, your appeal was denied.\nThat means you need to wait out your ban(mute) or purchase an unban(unmute) at http://store.clanwar.cf in the *Pardons* category.`)
+                .addField("**DENIED**", `${member.user.tag}**, your appeal was denied.**\nThat means you need to wait out your ban(mute) or purchase an unban(unmute) at http://store.clanwar.cf in the *Pardons* category.`)
                 .setFooter(`${member.user.username}, this is an automated message. Do not respond.`, 'https://cdn3.iconfinder.com/data/icons/gradient-circle/36/5029-512.png');
     
             message.channel.send(embed);
