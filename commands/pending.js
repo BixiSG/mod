@@ -29,7 +29,7 @@ if (member.user.bot === true) {
             message.channel.send(embed);
 
             message.delete();
-            message.channel.setName("PENDING")
+            message.channel.setName("⏳-pending")
     }
 
    module.exports.help = {
