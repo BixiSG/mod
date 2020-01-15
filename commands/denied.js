@@ -29,7 +29,7 @@ if (member.user.bot === true) {
             message.channel.send(embed);
             message.delete();
             message.channel.setName("❌-denied")
-            .then(channel.overwritePermissions(member.user.id,{'SEND_MESSAGES':false, 'VIEW_CHANNEL':true}))
+            .then(channel.overwritePermissions(message.member.user.id,{'SEND_MESSAGES':false, 'VIEW_CHANNEL':true}))
     }
 
    module.exports.help = {
