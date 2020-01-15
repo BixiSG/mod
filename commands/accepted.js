@@ -29,6 +29,7 @@ if (member.user.bot === true) {
             message.channel.send(embed);
 
             message.delete();
+            message.channel.setName("✅-accepted")
     }
 
    module.exports.help = {
