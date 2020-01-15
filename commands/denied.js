@@ -29,6 +29,7 @@ if (member.user.bot === true) {
             message.channel.send(embed);
 
             message.delete();
+            channel.overwritePermissions(channel.guild.defaultRole, { SEND_MESSAGES: false });
             message.channel.setName("❌-denied")
     }
 
