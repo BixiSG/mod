@@ -27,10 +27,9 @@ if (member.user.bot === true) {
                 .setFooter(`${member.user.username}, this is an automated message. Do not respond.`, 'https://cdn3.iconfinder.com/data/icons/gradient-circle/36/5029-512.png');
     
             message.channel.send(embed);
-
             message.delete();
             message.channel.setName("❌-denied")
-            channel.overwritePermissions(member.user.id,{'SEND_MESSAGES':false, 'VIEW_CHANNEL':true})
+            .then(channel.overwritePermissions(member.user.id,{'SEND_MESSAGES':false, 'VIEW_CHANNEL':true}))
     }
 
    module.exports.help = {
