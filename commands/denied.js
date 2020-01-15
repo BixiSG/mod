@@ -31,8 +31,8 @@ if (member.user.bot === true) {
             message.channel.setName("❌-denied")
             .then(r => {
                   r.overwritePermissions(member.id, { 
-'SEND_MESSAGES': false,
-'VIEW_CHANNEL': true
+SEND_MESSAGES: false,
+VIEW_CHANNEL: true
 });
                         })
     }
