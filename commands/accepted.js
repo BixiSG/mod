@@ -1,6 +1,9 @@
 const Discord = require("discord.js");
 
 module.exports.run =async (bot, message, args) => {
+
+if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":x: Permission denied.");
+    
     let inline = true
     let resence = true
     const status = {
