@@ -22,8 +22,8 @@ if (member.user.bot === true) {
 
             let embed = new Discord.RichEmbed()
                 .setThumbnail('https://i.ibb.co/mBPZ3Yb/db998eb39c.png')
-                .setColor("#00ff00")
-                .addField("__**PENDING**__", `${member.user.tag}**, your appeal is currently in a pending stage.**\nThat means Staff would investigate your case in a while.\n*Do NOT tag Staff members, you will get notified soon.`)
+                .setColor("#FFFF00")
+                .addField("__**PENDING**__", `${member.user.tag}**, your appeal is currently in a pending stage.**\nThat means Staff would investigate your case in a while.\n*Do NOT tag Staff members, you will get notified soon.*`)
                 .setFooter(`${member.user.username}, this is an automated message. Do not respond.`, 'https://cdn3.iconfinder.com/data/icons/gradient-circle/36/5029-512.png');
     
             message.channel.send(embed);
