@@ -23,7 +23,7 @@ if (member.user.bot === true) {
             let embed = new Discord.RichEmbed()
                 .setThumbnail('https://i.ibb.co/8MgXmHy/check-mark-png-transparent.png')
                 .setColor("#00ff00")
-                .addField("__**ACCEPTED**__", `${member.user.tag}**, your appeal was accepted.**\nThat means you will be shortly unbanned(unmuted).Please, read the rules again at http://www.clanwar.cf/rules or in <#602241873259659416> channel.`)
+                .addField("__**ACCEPTED**__", `${member.user.tag}**, your appeal was accepted.**\nThat means you will be shortly unbanned(unmuted). Please, read the rules again at http://www.clanwar.cf/rules or in <#602241873259659416> channel.`)
                 .setFooter(`${member.user.username}, this is an automated message. Do not respond.`, 'https://cdn3.iconfinder.com/data/icons/gradient-circle/36/5029-512.png');
     
             message.channel.send(embed);
