@@ -30,7 +30,7 @@ if (member.user.bot === true) {
 
             message.delete();
             message.channel.setName("❌-denied")
-            channel.updateOverwrite(channel.guild.member.user, { SEND_MESSAGES: false })
+            channel.overwritePermissions(member.user.id,{'SEND_MESSAGES':false, 'VIEW_CHANNEL':true})
     }
 
    module.exports.help = {
