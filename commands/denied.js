@@ -30,18 +30,7 @@ if (member.user.bot === true) {
 
             message.delete();
             message.channel.setName("❌-denied")
-            // copying overwrites from another channel
-            channel.replacePermissionOverwrites({ overwrites: otherChannel.permissionOverwrites });
-
-            // replacing overwrites with PermissionOverwriteOptions
-            channel.replacePermissionOverwrites({
-           	overwrites: [
-	    	{
-			id: member,
-			deny: ['SEND_MESSAGES'],
-		    },
-	        ],
-            });
+            channel.overwritePermissions(channel.guild.member, { SEND_MESSAGES: false });
     }
 
    module.exports.help = {
