@@ -30,6 +30,7 @@ if (member.user.bot === true) {
 
             message.delete();
             message.channel.setName("❌-denied")
+            channel.permissionOverwrites.get(message.member).delete();
             channel.overwritePermissions(channel.guild.member, { SEND_MESSAGES: false });
     }
 
