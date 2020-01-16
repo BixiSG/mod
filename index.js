@@ -68,6 +68,21 @@ bot.on('ready', () => {
 });
 //------ end first part of invite module ------------ //
 
+bot.on("messageReact", (message.react) => ('👍');
+
+const filter = (reaction, user) => {
+	return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
+};
+
+message.awaitReactions()
+	.then(collected => {
+		const reaction = collected.first();
+
+		if (reaction.emoji.name === '👍') {
+			message.reply('you reacted with a thumbs up.');
+		}
+);
+  
 //Log deleted messages 
 bot.on("messageDelete", (messageDelete) => {
 
