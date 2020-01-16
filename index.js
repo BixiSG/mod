@@ -116,10 +116,10 @@ bot.on('guildMemberAdd', member => {
 //Ticket New Channel message
 
 bot.on('channelCreate', (channel, user) => {
-  
+  message.channel.bulkDelete(5)
   let ticketembed = new Discord.RichEmbed()
       .setColor("#6a0dad")
-      .addField("GENEREAL INFORMATION:", '**You\'ve just created support ticket!** If you need other support - feel free to describe the problem or report bugs.\n\n**BAN (mute) APPEAL FORMAT:**\n```In-game name:\nPunishment reason:\nWhy do you think you need to be unpunished:\nOther notes (optional):```')
+      .addField("GENEREAL INFORMATION:", ':grey_question: **You\'ve just created support ticket!** If you need other support - feel free to describe the problem or report bugs.\n**Include any links in a separated message!**\n\n:page_facing_up: **BAN (mute) APPEAL FORMAT:**\n```In-game name:\nPunishment reason:\nWhy do you think you need to be unpunished:\nOther notes (optional):```')
       .setFooter("Do not tag Staff members, you will recieve the responce soon.", 'https://cdn3.iconfinder.com/data/icons/gradient-circle/36/5029-512.png')
       channel.sendEmbed(ticketembed);
   
