@@ -121,8 +121,9 @@ bot.on('channelCreate', (channel, user) => {
       .setColor("#6a0dad")
       .addField("GENEREAL INFORMATION:", ':grey_question: **You\'ve just created support ticket!**\nIf you need other support - feel free to describe the problem or report bugs.\n:warning: **Include any links in a separated message!**\n\n:page_facing_up: **BAN (mute) APPEAL FORMAT:**\n```In-game name:\nPunishment reason:\nWhy do you think you need to be unpunished:\nOther notes (optional):```')
       .setFooter("Do not tag Staff members, you will recieve the responce soon.", 'https://cdn3.iconfinder.com/data/icons/gradient-circle/36/5029-512.png')   
+      message.channel.bulkDelete(3);
+      setTimeout(function(){channel.sendEmbed(ticketembed)}, 200);})
       
-      channel.sendEmbed(ticketembed);
 });
 
 // invite module
