@@ -112,7 +112,16 @@ bot.on('guildMemberAdd', member => {
 
 });
 
+//test
+bot.on('channelCreate', (channel, user) => {
+  
+  let ticketembed = new Discord.RichEmbed()
+      .setColor('RANDOM')
+      .addField("Message", "Test")
 
+      channel.sendEmbed(ticketembed);
+  
+});
 
 // invite module
 bot.on('guildMemberAdd', member => {
