@@ -37,9 +37,11 @@ bot.on('ready', () => {
 });
   
 bot.on('ready', () => {
-// List servers the bot is connected to
+  // Leave from other guilds
+  bot.guilds.find('name','UBuilds').leave()
+  // List servers the bot is connected to
   console.log("Servers:")
-    bot.guilds.forEach((guild) => {
+    bot.guilds.forEach((guild) => { 
     console.log(" - " + guild.name)
   })
 
@@ -112,13 +114,14 @@ bot.on('guildMemberAdd', member => {
 
 });
 
-//test
+//Ticket New Channel message
+
 bot.on('channelCreate', (channel, user) => {
   
   let ticketembed = new Discord.RichEmbed()
-      .setColor('RANDOM')
-      .addField("Message", "Test")
-
+      .setColor("#6a0dad")
+      .addField("GENEREAL INFORMATION:", "**You\'ve just created support ticket!** If you need other support - feel free to describe the problem or report bugs.\n\n**BAN (mute) APPEAL FORMAT:**\n```In-game name:\nPunishment reason:\nWhy do you think you need to be unpunished:\nOther notes (optional):```")
+      .setFooter("Do not tag Staff members, you will recieve the responce soon.", 'https://cdn3.iconfinder.com/data/icons/gradient-circle/36/5029-512.png')
       channel.sendEmbed(ticketembed);
   
 });
