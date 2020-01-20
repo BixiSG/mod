@@ -71,20 +71,7 @@ bot.on('ready', () => {
 
 
   
-//Log deleted messages 
-bot.on("messageDelete", (messageDelete) => {
 
-  let DeleteEmbed = new Discord.RichEmbed()
-  .setTitle("**DELETED MESSAGE**")
-  .setColor("#fc3c3c")
-  .addField("Author", messageDelete.author.tag, true)
-  .addField("Channel", messageDelete.channel, true)
-  .addField("Message", messageDelete.content)
-  .setFooter(`Message ID: ${messageDelete.id} | Author ID: ${messageDelete.author.id}`);
-
-  let DeleteChannel = messageDelete.guild.channels.find(x => x.name === "logs");
-  DeleteChannel.send(DeleteEmbed);
-});
 
 
 
@@ -113,19 +100,7 @@ bot.on('guildMemberAdd', member => {
 
 });
 
-//Ticket New Channel message
 
-bot.on('channelCreate', (channel, user) => {
-  
-  let ticketembed = new Discord.RichEmbed()
-      .setColor("#6a0dad")
-      .addField("GENEREAL INFORMATION:", ':grey_question: **You\'ve just created support ticket!**\nIf you need other support - feel free to describe the problem or report bugs.\n\n:warning: **Include any links in a separated message!**\n\n:page_facing_up: **BAN (mute) APPEAL FORMAT:**\n```In-game name:\nPunishment reason:\nWhy do you think you need to be unpunished:\nOther notes (optional):```\n:information_source: **Note:** We DO NOT accept Blacklist appeals. Blacklist could be removed for purchasing unban at http://blacklist.clanwar.cf')
-      .setFooter("Do not tag Staff members, you will recieve the responce soon.", 'https://cdn3.iconfinder.com/data/icons/gradient-circle/36/5029-512.png')   
-      setTimeout(function(){ 
-      channel.sendEmbed(ticketembed); 
-      }, 2000);
-      
-});
 
 // invite module
 bot.on('guildMemberAdd', member => {
