@@ -18,9 +18,8 @@ let target = message.mentions.users.first() || message.author
             message.channel.send(embed);
             message.delete();
             .then(r => {
-                  r.overwritePermissions(channel.guild.defaultRole, { 
-SEND_MESSAGES: false,
-VIEW_CHANNEL: null
+                  r.overwritePermissions(channel.guild.defaultRole.id, { 
+SEND_MESSAGES: false
 });
                         })
     }
