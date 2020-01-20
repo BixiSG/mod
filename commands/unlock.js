@@ -1,14 +1,14 @@
-exports.run = (client, message, args) => {
+const Discord = require("discord.js");
+
+module.exports.run =async (bot, message, args) => {
    
-    let modRole = message.guild.roles.find('name', 'Staff');
-    if (!message.member.roles.has(modRole.id)) {
-        return message.reply(':x: **No permissions to use that.**').catch(console.error);
-    }
-        message.channel.overwritePermissions(message.guild.id, {
+if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":x: Permission denied.");
+message.channel.overwritePermissions(message.guild.id, {
             SEND_MESSAGES: null
-        }).then(() => {
-            message.channel.send(`**:white_check_mark: Channel was unlocked.**`)
-        }
+            }).then(() => {
+            message.channel.send("**:white_check_mark: Channel was unlocked.**")
+            message.delete();
+                          }
 };
 exports.help = {
   name: 'unlock',
