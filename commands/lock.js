@@ -1,4 +1,3 @@
-const ms = require('ms');
 exports.run = (client, message, args) => {
    
     let modRole = message.guild.roles.find('name', 'Staff');
