@@ -1,11 +1,10 @@
-const Discord = require("discord.js");
 
-module.exports.run = async (bot, message, args) => {
-
-    channel.overwritePermissions(channel.guild.defaultRole, { SEND_MESSAGES: false }).then(() => { 
-    message.channel.send("**:white_check_mark: Channel is now locked.**");
-            message.delete()
-    }
+async run(msg, [channel = msg.channel]) {
+    const type = channel.type === 'text' ? 'SEND_MESSAGES' : 'CONNECT';
+    await channel.overwritePermissions(channel.guild.defaultRole, { [type]: false });
+    if (msg.channel.permissionsFor(msg.guild.me).has('SEND_MESSAGES') === false) return true;
+    return msg.send('This channel is now locked.');
+  }
 };
 
 exports.help = {
