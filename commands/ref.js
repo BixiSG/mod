@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const snekfetch = require('snekfetch');
 exports.run = async (client, message, args) => {
+	let msg = await message.channel.send(":eyes: Looking for pictures...");
 	try {
         const { body } = await snekfetch
             .get('https://www.reddit.com/r/architectureporn.json?sort=top&t=week')
@@ -9,13 +10,14 @@ exports.run = async (client, message, args) => {
         if (!allowed.length) return message.channel.send('No fresh memes. Try again later.');
         const randomnumber = Math.floor(Math.random() * allowed.length)
         const embed = new Discord.RichEmbed()
-        .setColor(0x00A2E8)
+        .setColor(0x9900FF)
         .setTitle(allowed[randomnumber].data.title)
-        .setDescription("By: " + allowed[randomnumber].data.author)
+        .setDescription("Posted by: " + allowed[randomnumber].data.author)
         .setImage(allowed[randomnumber].data.url)
         .setFooter("From r/ArchitecturePorn")
         message.channel.send(embed)
 	message.delete()
+	msg.delete()
     } catch (err) {
         return console.log(err);
     }
