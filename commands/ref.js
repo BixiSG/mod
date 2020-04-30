@@ -15,6 +15,7 @@ exports.run = async (client, message, args) => {
         .setImage(allowed[randomnumber].data.url)
         .setFooter("From r/ArchitecturePorn")
         message.channel.send(embed)
+	message.delete()
     } catch (err) {
         return console.log(err);
     }
