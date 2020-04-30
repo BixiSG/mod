@@ -11,6 +11,7 @@ exports.run = async (client, message, args) => {
         const embed = new Discord.RichEmbed()
         .setColor(#A2E800)
         .setTitle(allowed[randomnumber].data.title)
+	.setDescription("By: " + allowed[randomnumber].data.author)
         .setImage(allowed[randomnumber].data.url)
         .addField("Info:", "Up votes: " + allowed[randomnumber].data.ups + " / Comments: " + allowed[randomnumber].data.num_comments)
         message.channel.send(embed)
