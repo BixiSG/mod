@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
             .get('https://www.reddit.com/r/earthporn.json?sort=top&t=week')
             .query({ limit: 800 });
         const allowed = message.channel.nsfw ? body.data.children : body.data.children.filter(post => !post.data.over_18);
-        if (!allowed.length) return message.channel.send('No fresh memes. Try again later.');
+        if (!allowed.length) return message.channel.send(':x: No fresh images. Try again later.');
         const randomnumber = Math.floor(Math.random() * allowed.length)
         const embed = new Discord.RichEmbed()
         .setColor(0x38761D)
