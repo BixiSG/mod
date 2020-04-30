@@ -13,7 +13,6 @@ exports.run = async (client, message, args) => {
         .setTitle(allowed[randomnumber].data.title)
         .setDescription("By: " + allowed[randomnumber].data.author)
         .setImage(allowed[randomnumber].data.url)
-        .addField("Info:", "Up votes: " + allowed[randomnumber].data.ups + " / Comments: " + allowed[randomnumber].data.num_comments)
         .setFooter("From r/ArchitecturePorn")
         message.channel.send(embed)
     } catch (err) {
