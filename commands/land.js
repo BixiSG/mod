@@ -14,7 +14,7 @@ exports.run = async (client, message, args) => {
         .setTitle(allowed[randomnumber].data.title)
         .setDescription("Posted by: " + allowed[randomnumber].data.author)
         .setImage(allowed[randomnumber].data.url)
-        .setFooter("From r/EarthPorn")
+        .setFooter("💡 Use -land to generate new landscape image")
         message.channel.send(embed)
 	message.delete()
 	msg.delete()
