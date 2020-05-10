@@ -3,7 +3,7 @@ const attachment = new MessageAttachment('https://media.tenor.com/images/d9de403
     
 
 exports.run = (client, msg, args) => {
-message.channel.send(`${message.author},`, attachment);
+channel.send(`${message.author},`, attachment);
 };
 
 exports.help = {
