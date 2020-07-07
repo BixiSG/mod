@@ -16,8 +16,8 @@ module.exports.run = async (bot, message, args) => {
     .addField("Time", message.createdAt)
     .addField("Reason", bReason);
 
-    let incidentchannel = message.guild.channels.find(`name`, "kicked-banned");
-    if(!incidentchannel) return message.channel.send("Can't find kicked-banned channel.");
+    let incidentchannel = message.guild.channels.find(`name`, "logs");
+    if(!incidentchannel) return message.channel.send("Can't find logs channel.");
 
     message.guild.member(bUser).ban(bReason);
     incidentchannel.send(banEmbed);
