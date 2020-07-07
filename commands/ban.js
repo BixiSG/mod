@@ -8,10 +8,10 @@ module.exports.run = async (bot, message, args) => {
     if(bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("That person can't be banned!");
 
     let banEmbed = new Discord.RichEmbed()
-    .setDescription("~Ban~")
+    .setDescription("**BAN**")
     .setColor("#bc0000")
-    .addField("Banned User", `${bUser} with ID ${bUser.id}`)
-    .addField("Banned By", `<@${message.author.id}> with ID ${message.author.id}`)
+    .addField("Banned User", `${bUser} (ID ${bUser.id})`)
+    .addField("Banned By", `<@${message.author.id}> (ID ${message.author.id})`)
     .addField("Banned In", message.channel)
     .addField("Time", message.createdAt)
     .addField("Reason", bReason);
