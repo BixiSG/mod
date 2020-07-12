@@ -4,8 +4,8 @@ module.exports.run = async (bot, message, args) => {
 
 let helpembed = new Discord.RichEmbed()
 .setDescription("**HELP MENU**")
-.setColor('RANDOM')
-.addField("Default Prefix:", "`-`")
+.setColor("#6a0dad")
+.addField("Discord & Server support:", "\<618903822319747072>")
 .addField("How to report a user:", "`-report [@user] [reason]`")
 
 message.channel.send(helpembed);
@@ -13,7 +13,7 @@ message.channel.send(helpembed);
 if(message.member.hasPermission("MANAGE_MESSAGES")){
 let modembed = new Discord.RichEmbed()
 .setDescription("**MOD HELP MENU**")
-.setColor("#8300ff")
+.setColor("#6a0dad")
 .addField("Default Prefix:", "`-`")
 .addField("**Mod Commands**", "List of Mod Commands and usage")
 .addField("dm", "sends direct message to a specified user")
