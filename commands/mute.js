@@ -5,16 +5,16 @@ exports.run = (client, message, args) => {
   let member = message.mentions.members.first();
   let modlog = message.guild.channels.find('name', 'logs');
   let muteRole = message.guild.roles.find('name', 'perm-mute');
-  if (!modlog) return message.reply('I cannot find a message-log channel').catch(console.error);
-  if (!muteRole) return message.reply('I cannot find a mute role').catch(console.error);
-  if (reason.length < 1) return message.reply('You must supply a reason for the mute.').catch(console.error);
-  if (message.mentions.users.size < 1) return message.reply('You must mention someone to mute them.').catch(console.error);
+  if (!modlog) return message.reply(':x: I cannot find a message-log channel').catch(console.error);
+  if (!muteRole) return message.reply(':x: I cannot find a mute role').catch(console.error);
+  if (reason.length < 1) return message.reply(':x: You must supply a reason for the mute.').catch(console.error);
+  if (message.mentions.users.size < 1) return message.reply(':x: You must mention someone to mute them.').catch(console.error);
   const embed = new Discord.RichEmbed()
     .setColor(0x00AE86)
     .setTimestamp()
     .setDescription(`**Action:** Un/mute\n**Target:** ${member.user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`);
 
-  if (!message.guild.me.hasPermission('MANAGE_ROLES')) return message.reply('I do not have the correct permissions.').catch(console.error);
+  if (!message.guild.me.hasPermission('MANAGE_ROLES')) return message.reply(':x: I do not have the correct permissions.').catch(console.error);
 
   if (member.roles.has(muteRole.id)) {
     member.removeRole(muteRole).then(() => {
