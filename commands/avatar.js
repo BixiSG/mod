@@ -1,7 +1,7 @@
 module.exports.run = async (bot, message, args) => {
-  if(message.member.roles.find(r => r.name === "Prime")) return message.channel.send(":x: This is a **PRIME** feature.");
+  if (!message.member.roles.some(role => role.name === 'Prime')) return message.channel.send(":x: This is a **PRIME** feature.");
 
-  let msg = await message.channel.send("Generating avatar...");
+  let msg = await message.channel.send("🕐 Generating avatar...");
   let target = message.mentions.users.first() || message.author;
 
   await message.channel.send({files: [
