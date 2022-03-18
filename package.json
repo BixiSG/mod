@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  
+  "engines": {
+    "node": "16.4.x"
+  },
+  
   "dependencies": {
     "array-sort": "^1.0.0",
     "cheweybot-api": "^1.0.4",
