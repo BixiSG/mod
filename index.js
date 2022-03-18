@@ -30,7 +30,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on('ready', () => {
   setInterval(async ()=>{
       
-      let textList = ['Dark#3668','Project is currently paused.']
+      let textList = ['Dark#3668','𝓫𝔂 𝓭𝓪𝓻𝓴']
       var text = textList[Math.floor(Math.random() * textList.length)];
       bot.user.setActivity(text , { type: 'STREAMING' })
   },60000) // milliseconds
