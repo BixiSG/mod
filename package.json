@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  
+  "engines": {
+    "node": "16.x"
+  },
+  
   "dependencies": {
     "array-sort": "^1.0.0",
     "cheweybot-api": "^1.0.4",
@@ -30,6 +35,6 @@
   },
   
   "keywords": [],
-  "author": "@broomez420-[CFCC Core Dev]#6914",
+  "author": "Dark#3668",
   "license": "ISC"
 }
